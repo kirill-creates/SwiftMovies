@@ -19,7 +19,8 @@ struct MoviesListView: View {
                         List {
                             ForEach(movies, id: \.id) { movie in
                                 NavigationLink {
-                                    MovieDetailedView(movie: movie)
+                                    let coordinator = MovieDetailsCoordinator(movieId: movie.id)
+                                    MovieDetailedView(coordinator: coordinator)
                                 } label: {
                                     MovieSimpleView(movie: movie)
                                 }

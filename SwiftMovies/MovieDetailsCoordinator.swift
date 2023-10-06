@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  MovieDetailsCoordinator.swift
 //  SwiftMovies
 //
 //  Created by Kirill on 6.10.2023.
@@ -8,23 +8,25 @@
 import Foundation
 import Combine
 
-class MainCoordinator: ObservableObject {
+class MovieDetailsCoordinator: ObservableObject {
     private var cancellable: AnyCancellable?
+    
+    let movieId: Int
     
     @Published var fetching = false
     
-    @Published var moviesList: MoviesList? = nil
+    @Published var movie: Movie? = nil
     
-    init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.fetchMovies()
-        }
+    init(movieId: Int) {
+        self.movieId = movieId
+        
+        fetchMovieDetails()
     }
     
-    private func fetchMovies() {
+    private func fetchMovieDetails() {
         fetching = true
         
-        cancellable = BaseAPI.fetchMovies().sink(
+        cancellable = BaseAPI.fetchMovieDetails(with: movieId).sink(
             receiveCompletion: { [weak self] result in
                 switch result {
                 case .failure(let err):
@@ -37,21 +39,21 @@ class MainCoordinator: ObservableObject {
                     self?.fetching = false
                 }
             },
-            receiveValue: { [weak self] moviesList in
+            receiveValue: { [weak self] movie in
                 DispatchQueue.main.async {
-                    self?.moviesList = moviesList
+                    self?.movie = movie
                 }
             }
         )
     }
     
     func fetchTapped() {
-        fetchMovies()
+        fetchMovieDetails()
     }
     
     deinit {
         cancellable = nil
-        moviesList = nil
+        movie = nil
     }
 }
 
