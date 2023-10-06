@@ -38,7 +38,3 @@ struct MovieSimpleView: View {
         }
     }
 }
-
-//#Preview {
-//    MovieSimpleView()
-//}

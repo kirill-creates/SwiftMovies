@@ -11,7 +11,7 @@ import Combine
 class MainCoordinator: ObservableObject {
     private var cancellable: AnyCancellable?
     
-    @Published var fetching = false
+    @Published var fetching = true
     
     @Published var moviesList: MoviesList? = nil
     
@@ -29,6 +29,11 @@ class MainCoordinator: ObservableObject {
                 switch result {
                 case .failure(let err):
                     print("--- fetch Error: \(err)")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        self?.fetchMovies()
+                    }
+                    
                 case .finished:
                     print("--- fetch completed")
                 }

@@ -49,12 +49,8 @@ struct MovieDetailedView: View {
                 } else {
                     VStack {
                         Spacer()
-                        Text("An error occured...")
-                        Button("Retry") {
-                            coordinator.fetchTapped()
-                        }
-                        .padding()
-                        .font(.title2)
+                        Image(systemName: "icloud.slash")
+                            .imageScale(.large)
                         Spacer()
                     }
                 }
@@ -62,7 +58,3 @@ struct MovieDetailedView: View {
         }
     }
 }
-
-//#Preview {
-//    MovieDetailedView()
-//}

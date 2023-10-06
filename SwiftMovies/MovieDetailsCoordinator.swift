@@ -31,6 +31,11 @@ class MovieDetailsCoordinator: ObservableObject {
                 switch result {
                 case .failure(let err):
                     print("--- fetch Error: \(err)")
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        self?.fetchMovieDetails()
+                    }
+                    
                 case .finished:
                     print("--- fetch completed")
                 }
