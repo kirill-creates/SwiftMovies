@@ -37,7 +37,7 @@ enum BaseAPI {
     static let imageUrl = "https://image.tmdb.org/t/p/w200"
                                 
     static func movieDetailsUrl(with movieId: String) -> String {
-        "https://developers.themoviedb.org/3/movies/\(movieId)"
+        "https://api.themoviedb.org/3/movie/\(movieId)"
     }
     
     static func baseRequest(urlString: String) -> URLRequest {
@@ -65,6 +65,14 @@ extension BaseAPI {
     
     static func fetchMovies() -> AnyPublisher<MoviesList, Error> {
         let request = baseRequest(urlString: "\(moviesListUrl)?api_key=\(apiKey)")
+        return agent.send(request)
+            .map(\.value)
+            .eraseToAnyPublisher()
+    }
+    
+    static func fetchMovieDetails(with movieId: Int) -> AnyPublisher<Movie, Error> {
+        let urlString = movieDetailsUrl(with: "\(movieId)") + "?api_key=\(apiKey)"
+        let request = baseRequest(urlString: urlString)
         return agent.send(request)
             .map(\.value)
             .eraseToAnyPublisher()

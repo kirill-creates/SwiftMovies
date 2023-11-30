@@ -19,7 +19,8 @@ struct MoviesListView: View {
                         List {
                             ForEach(movies, id: \.id) { movie in
                                 NavigationLink {
-                                    MovieDetailedView(movie: movie)
+                                    let coordinator = MovieDetailsCoordinator(movieId: movie.id)
+                                    MovieDetailedView(coordinator: coordinator)
                                 } label: {
                                     MovieSimpleView(movie: movie)
                                 }
@@ -29,12 +30,8 @@ struct MoviesListView: View {
                     } else {
                         VStack {
                             Spacer()
-                            Text("An error occured...")
-                            Button("Retry") {
-                                coordinator.fetchTapped()
-                            }
-                            .padding()
-                            .font(.title2)
+                            Image(systemName: "icloud.slash")
+                                .imageScale(.large)
                             Spacer()
                         }
                     }

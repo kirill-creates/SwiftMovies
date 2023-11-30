@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  MovieDetailsCoordinator.swift
 //  SwiftMovies
 //
 //  Created by Kirill on 6.10.2023.
@@ -8,30 +8,32 @@
 import Foundation
 import Combine
 
-class MainCoordinator: ObservableObject {
+class MovieDetailsCoordinator: ObservableObject {
     private var cancellable: AnyCancellable?
     
-    @Published var fetching = true
+    let movieId: Int
     
-    @Published var moviesList: MoviesList? = nil
+    @Published var fetching = false
     
-    init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.fetchMovies()
-        }
+    @Published var movie: Movie? = nil
+    
+    init(movieId: Int) {
+        self.movieId = movieId
+        
+        fetchMovieDetails()
     }
     
-    private func fetchMovies() {
+    private func fetchMovieDetails() {
         fetching = true
         
-        cancellable = BaseAPI.fetchMovies().sink(
+        cancellable = BaseAPI.fetchMovieDetails(with: movieId).sink(
             receiveCompletion: { [weak self] result in
                 switch result {
                 case .failure(let err):
                     print("--- fetch Error: \(err)")
-                    
+
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                        self?.fetchMovies()
+                        self?.fetchMovieDetails()
                     }
                     
                 case .finished:
@@ -42,21 +44,21 @@ class MainCoordinator: ObservableObject {
                     self?.fetching = false
                 }
             },
-            receiveValue: { [weak self] moviesList in
+            receiveValue: { [weak self] movie in
                 DispatchQueue.main.async {
-                    self?.moviesList = moviesList
+                    self?.movie = movie
                 }
             }
         )
     }
     
     func fetchTapped() {
-        fetchMovies()
+        fetchMovieDetails()
     }
     
     deinit {
         cancellable = nil
-        moviesList = nil
+        movie = nil
     }
 }
 

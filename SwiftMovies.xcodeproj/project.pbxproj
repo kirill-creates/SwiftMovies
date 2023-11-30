@@ -20,6 +20,7 @@
 		ED5C80EE2AD0130F00A5E8F7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80ED2AD0130F00A5E8F7 /* MainCoordinator.swift */; };
 		ED5C80F32AD0212C00A5E8F7 /* MovieSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80F22AD0212C00A5E8F7 /* MovieSimpleView.swift */; };
 		ED5C80F52AD02DD400A5E8F7 /* MovieDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80F42AD02DD400A5E8F7 /* MovieDetailedView.swift */; };
+		EDEF766A2AD04A6200487109 /* MovieDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF76692AD04A6200487109 /* MovieDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		ED5C80F22AD0212C00A5E8F7 /* MovieSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSimpleView.swift; sourceTree = "<group>"; };
 		ED5C80F42AD02DD400A5E8F7 /* MovieDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailedView.swift; sourceTree = "<group>"; };
 		ED8D22B52AD041780043026F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDEF76692AD04A6200487109 /* MovieDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				ED8D22B52AD041780043026F /* Info.plist */,
 				ED5C80E82ACFFA8A00A5E8F7 /* BaseAPI.swift */,
 				ED5C80ED2AD0130F00A5E8F7 /* MainCoordinator.swift */,
+				EDEF76692AD04A6200487109 /* MovieDetailsCoordinator.swift */,
 				ED5C80BC2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift */,
 				ED5C80EC2AD00B9A00A5E8F7 /* Models */,
 				ED5C80EF2AD0188000A5E8F7 /* Views */,
@@ -299,6 +302,7 @@
 				ED5C80BF2ACFF9F900A5E8F7 /* MoviesListView.swift in Sources */,
 				ED5C80E92ACFFA8A00A5E8F7 /* BaseAPI.swift in Sources */,
 				ED5C80BD2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift in Sources */,
+				EDEF766A2AD04A6200487109 /* MovieDetailsCoordinator.swift in Sources */,
 				ED5C80E72ACFFA7200A5E8F7 /* Movie.swift in Sources */,
 				ED5C80F32AD0212C00A5E8F7 /* MovieSimpleView.swift in Sources */,
 			);
