@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED5C80BD2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80BC2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift */; };
-		ED5C80BF2ACFF9F900A5E8F7 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80BE2ACFF9F900A5E8F7 /* MoviesList.swift */; };
+		ED5C80BF2ACFF9F900A5E8F7 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80BE2ACFF9F900A5E8F7 /* MoviesListView.swift */; };
 		ED5C80C12ACFF9FB00A5E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5C80C02ACFF9FB00A5E8F7 /* Assets.xcassets */; };
 		ED5C80C42ACFF9FB00A5E8F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5C80C32ACFF9FB00A5E8F7 /* Preview Assets.xcassets */; };
 		ED5C80CE2ACFF9FB00A5E8F7 /* SwiftMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80CD2ACFF9FB00A5E8F7 /* SwiftMoviesTests.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		ED5C80B92ACFF9F900A5E8F7 /* SwiftMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5C80BC2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMoviesApp.swift; sourceTree = "<group>"; };
-		ED5C80BE2ACFF9F900A5E8F7 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
+		ED5C80BE2ACFF9F900A5E8F7 /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
 		ED5C80C02ACFF9FB00A5E8F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5C80C32ACFF9FB00A5E8F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5C80C92ACFF9FB00A5E8F7 /* SwiftMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +156,7 @@
 		ED5C80EF2AD0188000A5E8F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ED5C80BE2ACFF9F900A5E8F7 /* MoviesList.swift */,
+				ED5C80BE2ACFF9F900A5E8F7 /* MoviesListView.swift */,
 				ED5C80F22AD0212C00A5E8F7 /* MovieSimpleView.swift */,
 				ED5C80F42AD02DD400A5E8F7 /* MovieDetailedView.swift */,
 			);
@@ -296,7 +296,7 @@
 				ED5C80EE2AD0130F00A5E8F7 /* MainCoordinator.swift in Sources */,
 				ED5C80F52AD02DD400A5E8F7 /* MovieDetailedView.swift in Sources */,
 				ED5C80EB2AD00B9300A5E8F7 /* Movies.swift in Sources */,
-				ED5C80BF2ACFF9F900A5E8F7 /* MoviesList.swift in Sources */,
+				ED5C80BF2ACFF9F900A5E8F7 /* MoviesListView.swift in Sources */,
 				ED5C80E92ACFFA8A00A5E8F7 /* BaseAPI.swift in Sources */,
 				ED5C80BD2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift in Sources */,
 				ED5C80E72ACFFA7200A5E8F7 /* Movie.swift in Sources */,

@@ -45,7 +45,3 @@ struct MoviesListView: View {
         }
     }
 }
-
-//#Preview {
-//    //MoviesListView(coordinator: nil)
-//}
