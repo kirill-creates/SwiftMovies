@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieDetailedView: View {
     let coordinator: MovieDetailsCoordinator
-    
+
     var body: some View {
         VStack {
             if coordinator.fetching {
@@ -28,7 +28,7 @@ struct MovieDetailedView: View {
                         }
                         Spacer()
                     }
-                    
+
                     VStack {
                         Text(movie.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,13 +37,13 @@ struct MovieDetailedView: View {
                         Text(movie.releaseDate)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.title3)
-          
+
                         Text(movie.overview)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.callout)
                     }
                     .padding()
-                       
+
                     Spacer()
 
                 } else {

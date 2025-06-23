@@ -1,5 +1,5 @@
 //
-//  MoviesList.swift
+//  Movies.swift
 //  SwiftMovies
 //
 //  Created by Kirill on 6.10.2023.
@@ -12,7 +12,7 @@ struct MoviesList: Codable {
     let movies: [Movie]
     let totalPages: Int
     let totalResults: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case page
         case movies = "results"

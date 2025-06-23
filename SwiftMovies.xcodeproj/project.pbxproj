@@ -115,7 +115,7 @@
 				EDEF76692AD04A6200487109 /* MovieDetailsCoordinator.swift */,
 				ED5C80BC2ACFF9F900A5E8F7 /* SwiftMoviesApp.swift */,
 				ED5C80EC2AD00B9A00A5E8F7 /* Models */,
-				ED5C80EF2AD0188000A5E8F7 /* Views */,
+				ED5C80EF2AD0188000A5E8F7 /* Screens */,
 				ED5C80C02ACFF9FB00A5E8F7 /* Assets.xcassets */,
 				ED5C80C22ACFF9FB00A5E8F7 /* Preview Content */,
 			);
@@ -156,14 +156,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		ED5C80EF2AD0188000A5E8F7 /* Views */ = {
+		ED5C80EF2AD0188000A5E8F7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				ED5C80BE2ACFF9F900A5E8F7 /* MoviesListView.swift */,
 				ED5C80F22AD0212C00A5E8F7 /* MovieSimpleView.swift */,
 				ED5C80F42AD02DD400A5E8F7 /* MovieDetailedView.swift */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

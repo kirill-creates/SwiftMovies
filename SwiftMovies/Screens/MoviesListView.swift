@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MoviesListView.swift
 //  SwiftMovies
 //
 //  Created by Kirill on 6.10.2023.
